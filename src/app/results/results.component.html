@@ -1,0 +1,16 @@
+<h1>Results</h1>
+<p>{{ name }} has a score of {{ score }} out of 10.</p>
+<div *ngFor="let question of questions; index as i">
+    <p>{{ i + 1 }}) {{ question.question_name }}</p>
+    <p>User Answer: {{ answers }}</p>
+    <!-- <input type="radio" name="{{ i }}" value="{{ answer }}" [(ngModel)]="answer"/> -->
+    <!-- <label for="">{{ question.choice_1 }}</label>
+    <input type="radio" name="{{ i }}" value="{{ question.choice_2 }}" [(ngModel)]="question.selected"/>
+    <label for="">{{ question.choice_2 }}</label>
+    <input type="radio" name="{{ i }}" value="{{ question.choice_3 }}" [(ngModel)]="question.selected"/>
+    <label for="">{{ question.choice_3 }}</label>
+    <input type="radio" name="{{ i }}" value="{{ question.choice_4 }}" [(ngModel)]="question.selected"/>
+    <label for="">{{ question.choice_4 }}</label> -->
+    <p>Answer: {{ question.answer }}</p>
+  </div>
+  <a routerLink="/Scores" routerLinkActive="active">See scores</a>

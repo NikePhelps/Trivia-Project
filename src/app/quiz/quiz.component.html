@@ -1,0 +1,20 @@
+<section>
+<form class="name" *ngIf="shouldBeHidden" [ngClass]="{'hide': saveName()}" #nameForm="ngForm" (ngSubmit)=saveName(nameForm)>
+  <h1>Are you super enough?</h1>
+  <label for="">Username:</label>
+  <input type="text" name=name ngModel [value]="name">
+  <button class="stan">Excelsior!</button>
+</form>
+</section>
+<form *ngIf="!shouldBeHidden" #questionForm="ngForm" (ngSubmit)="check(questionForm)">
+    <!-- <label for="">Username:</label>
+    <input type="text" name=name ngModel [value]="name"> -->
+<div *ngFor="let question of questions; index as i">
+  <p>{{ question.question_name }}</p>
+  <input type="radio" name="question{{ i + 1 }}" ngModel [value]="question.choice_1">{{ question.choice_1 }}
+  <input type="radio" name="question{{ i + 1 }}" ngModel [value]="question.choice_2">{{ question.choice_2 }}
+  <input type="radio" name="question{{ i + 1 }}" ngModel [value]="question.choice_3">{{ question.choice_3 }}
+  <input type="radio" name="question{{ i + 1 }}" ngModel [value]="question.choice_4">{{ question.choice_4 }}
+</div>
+<button>Submit</button>
+</form>

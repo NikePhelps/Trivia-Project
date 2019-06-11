@@ -1,0 +1,32 @@
+section {
+    padding: 80px;
+    background: blue;
+    width: 27%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 30%;
+    top: 150px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+.stan {
+    margin-bottom: 5px;
+}
+
+.hide {
+    display: none;
+}

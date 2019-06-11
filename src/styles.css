@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background: url("https://image.cnbcfm.com/api/v1/image/105216852-114112722.jpg?v=1542292113&w=1400&h=950");
+    background-size: 250px;
+    width: 100%;
+    color: aliceblue;
+}
+
+nav {
+    padding: 15px;
+    background: blue;
+    width: 35%;
+    border-radius: 10px;
+}
+
